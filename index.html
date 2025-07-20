@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeoSick - Environmental Health Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #f8fafc; /* slate-50 */
+            --bg-card: #ffffff; /* white */
+            --border: #e2e8f0; /* slate-200 */
+            --text-primary: #0f172a; /* slate-900 */
+            --text-secondary: #475569; /* slate-600 */
+            --accent: #3b82f6; /* blue-500 */
+            --accent-hover: #2563eb; /* blue-600 */
+            --card-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9; /* slate-100 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; /* slate-300 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; /* slate-400 */
+        }
+
+        /* General Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.4s ease-out forwards;
+        }
+
+        /* FINAL INTRO V7 - "Anthropic Overture" */
+        @keyframes chaos-stream {
+            from { transform: translateY(100vh) scale(0.5); opacity: 0; }
+            50% { opacity: 1; }
+            to { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+        }
+        @keyframes conductor-pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 20px rgba(96, 165, 250, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(96, 165, 250, 0); }
+        }
+        @keyframes earth-paint-reveal {
+             from { mask-position: 100% 0; }
+             to { mask-position: 0 0; }
+        }
+        @keyframes slow-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes cloud-drift {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes aegis-resonance {
+            from { transform: scale(0.5); opacity: 0.7; border-width: 4px; }
+            to { transform: scale(2.5); opacity: 0; border-width: 0px; }
+        }
+        @keyframes brand-materialize {
+             from { opacity: 0; text-shadow: 0 0 30px #fff; filter: blur(10px); transform: translateY(20px); }
+             to { opacity: 1; text-shadow: 0 0 5px rgba(255,255,255,0.5); filter: blur(0); transform: translateY(0); }
+        }
+
+        @keyframes endless-scroll {
+            from { background-position: 0 0; }
+            to { background-position: -2000px -2000px; }
+        }
+
+        @keyframes simple-pulse {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(0.95);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.05);
+                opacity: 1;
+            }
+        }
+
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.8.0",
+    "three": "https://esm.sh/three@0.166.1",
+    "react-globe.gl": "https://esm.sh/react-globe.gl@2.27.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

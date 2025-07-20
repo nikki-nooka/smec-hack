@@ -1,0 +1,10 @@
+
+{
+  "name": "GeoSick",
+  "description": "An AI-powered application that analyzes satellite and neighborhood images to identify potential health hazards, predict associated diseases, and provide detailed reports with preventive measures. Features an integrated AI chatbot for health-related questions.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ],
+  "prompt": ""
+}
